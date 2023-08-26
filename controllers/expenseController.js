@@ -1,6 +1,6 @@
 const path = require("path");
 const Expense = require("../models/expenseModel");
-const database = require("../utils/database");
+//const database = require("../utils/database");
 
 exports.getHomePage = async (req, res, next) => {
   try {
