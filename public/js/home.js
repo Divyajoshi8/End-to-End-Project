@@ -203,8 +203,7 @@ async function editExpense(e) {
   }
 }
 
-addExpenseBtn.addEventListener("click", addExpense);
-document.addEventListener("DOMContentLoaded", getAllExpenses);
+
 
 async function buyPremium(e) {
   const token = localStorage.getItem("token");
@@ -229,7 +228,7 @@ async function buyPremium(e) {
 
       console.log(res);
       alert(
-        "Welcome to our Premium Membership, You have now Excess to Reports and LeaderBoard"
+        "Welcome to our Premium Membership, You have now access to Reports and LeaderBoard"
       );
       localStorage.setItem("token", res.data.token);
     },
@@ -248,12 +247,16 @@ async function isPremiumUser() {
     buyPremiumBtn.innerHTML = "Premium Member &#128081";
     reportsLink.removeAttribute("onclick");
     leaderboardLink.removeAttribute("onclick");
+    leaderboardLink.setAttribute("href", "/premium/getLeaderboardPage");
+    buyPremiumBtn.removeEventListener("click", buyPremium);
+  } else {
   }
 }
 
 buyPremiumBtn.addEventListener("click", buyPremium);
 addExpenseBtn.addEventListener("click", addExpense);
-document.addEventListener("DOMContentLoaded", isPremiumUser, getAllExpenses);
+document.addEventListener("DOMContentLoaded", isPremiumUser);
+document.addEventListener("DOMContentLoaded", getAllExpenses);
 
 
 table.addEventListener("click", (e) => {
