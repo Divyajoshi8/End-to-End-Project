@@ -326,7 +326,7 @@ async function isPremiumUser() {
     headers: { Authorization: token },
   });
   if (res.data.isPremiumUser) {
-    buyPremiumBtn.innerHTML = "Premium Member &#128081";
+    buyPremiumBtn.innerHTML = "Premium User";
     reportsLink.removeAttribute("onclick");
     leaderboardLink.removeAttribute("onclick");
     leaderboardLink.setAttribute("href", "/premium/getLeaderboard");
