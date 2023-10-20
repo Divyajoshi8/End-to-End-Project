@@ -27,7 +27,7 @@ exports.sendMail = async (req, res, next) => {
     }
     const client = Sib.ApiClient.instance;
     const apiKey = client.authentications['api-key'];
-    apiKey.apiKey = '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';
+    apiKey.apiKey = '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';
     const transEmailApi = new Sib.TransactionalEmailsApi();
     const sender = {
       email: 'joshidivya566@gmail.com',

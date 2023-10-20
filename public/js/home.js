@@ -254,7 +254,7 @@ async function editExpense(e) {
       );
       res.data.forEach((expense) => {
         if (expense.id == id) {
-          //console.log("Yeh id aayi hai res main: " + expense.id);
+          
           categoryValue.textContent = expense.category;
           descriptionValue.value = expense.description;
           amountValue.value = expense.amount;
